@@ -1,0 +1,27 @@
+{
+  "name": "how-good-you-know-me",
+  "version": "1.0.0",
+  "description": "Simple and fun to play CLI app using JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shobit1337/how-good-you-know-me.git"
+  },
+  "keywords": [
+    "cli",
+    "javascript"
+  ],
+  "author": "Shobit Deshwal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shobit1337/how-good-you-know-me/issues"
+  },
+  "homepage": "https://github.com/shobit1337/how-good-you-know-me#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "readline-sync": "^1.4.10"
+  }
+}
