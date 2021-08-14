@@ -1,6 +1,6 @@
 const birthDateInput = document.getElementById("birth-date");
 const luckyNumberInput = document.getElementById("lucky-number");
-const birthdayResult = document.getElementById("birthday-result");
+const birthdayResult = document.getElementById("output-container");
 const checkBtn = document.getElementById("check-btn");
 
 checkBtn.addEventListener("click", () => {
