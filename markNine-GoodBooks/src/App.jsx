@@ -27,25 +27,28 @@ const App = () => {
         <p>Here are my recommned books for the following genre, Enjoy!😄</p>
       </header>
       <hr />
-      {myGoodBooks.map((genre, i) => (
-        <GenreCard
-          key={i}
-          genre={genre.genre}
-          selectedGenre={selectedGenre}
-          setSelectedGenre={setSelectedGenre}
-        />
-      ))}
-      <hr />
-      Genre Selected: {selectedGenre}
-      {bookList &&
-        bookList.map((book, i) => (
-          <BookCard
+      <div className="genre-container">
+        {myGoodBooks.map((genre, i) => (
+          <GenreCard
             key={i}
-            book={book.name}
-            stars={book.stars}
-            link={book.link}
+            genre={genre.genre}
+            selectedGenre={selectedGenre}
+            setSelectedGenre={setSelectedGenre}
           />
         ))}
+      </div>
+      <hr />
+      <div className="book-container">
+        {bookList &&
+          bookList.map((book, i) => (
+            <BookCard
+              key={i}
+              book={book.name}
+              stars={book.stars}
+              link={book.link}
+            />
+          ))}
+      </div>
     </div>
   );
 };
