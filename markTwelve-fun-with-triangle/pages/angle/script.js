@@ -1,6 +1,6 @@
 const angleInput = document.getElementsByClassName("input");
 const submitBtn = document.getElementById("submit-btn");
-const outputContainer = document.getElementById("output");
+const outputContainer = document.getElementById("output-container");
 
 submitBtn.addEventListener("click", () => {
   //

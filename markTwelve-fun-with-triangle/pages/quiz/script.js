@@ -1,6 +1,6 @@
 const quizForm = document.querySelector("#quiz-form");
 const submitBtn = document.querySelector("#submit-btn");
-const resultContainer = document.querySelector("#result-container");
+const resultContainer = document.querySelector("#output-container");
 
 const ans = ["yes", "no", "5", "scalene", "isosceles"];
 
@@ -14,11 +14,13 @@ const calculateScore = () => {
     }
     index++;
   }
+  console.log(score);
   showResult(score);
 };
 
 const showResult = (score) => {
-  resultContainer.innerHTML = `Score: ${score}/5`;
+  resultContainer.innerText = `Score: ${score}/5`;
+  resultContainer.style.display = "block";
 };
 
 submitBtn.addEventListener("click", calculateScore);

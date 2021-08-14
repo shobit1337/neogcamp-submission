@@ -1,7 +1,7 @@
 const baseInput = document.getElementById("base-input");
 const heightInput = document.getElementById("height-input");
 const calculateBtn = document.getElementById("submit-btn");
-const outputField = document.getElementById("output");
+const outputField = document.getElementById("output-container");
 
 calculateBtn.addEventListener("click", () => {
   //
