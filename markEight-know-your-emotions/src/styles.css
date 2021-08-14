@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+nav {
+  background-color: #eab543;
+  padding: 2rem;
+}
+footer {
+  background-color: #eab543;
+  padding: 2rem;
+}
+h2 {
+  padding: 3em;
+}
+input {
+  max-width: 30vw;
+  height: 5vh;
+  margin: auto;
+}
