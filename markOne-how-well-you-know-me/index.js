@@ -6,8 +6,10 @@ const incorrectF = chalk.red.bold;
 const scoreF = chalk.black.bold.bgYellow;
 const questionF = chalk.magenta.bold;
 score = 0;
+var username = "";
 
-console.log(chalk.blue.bold("Hello Everyone!"));
+username = read.question("Who is playing? (name): ");
+console.log(chalk.blue.bold(`Hello ${username}!`));
 console.log(chalk.blue.bold('Welcome to "How well you know me?" game'));
 
 function ques(question, answer) {
@@ -18,7 +20,7 @@ function ques(question, answer) {
   } else {
     console.log(incorrectF("You answered wrong!!"));
   }
-  console.log(scoreF("Your Score is: " + score));
+  console.log(scoreF(`Your Score is: ` + score));
 }
 
 ques("What is my age?", "23");
@@ -27,9 +29,8 @@ ques("My pets name?", "Max");
 ques("Hours I sleep?", "8");
 ques("My Favorate Language?", "javascript");
 ques("Do I like gardening?", "yes");
-ques("Where I slept post of my day?", "8");
+ques("Where I slept most of my day?", "home");
 ques("My most played video game?", "csgo");
-ques("Person I talk to most?", "mithie");
 ques("what username I use on my most of handles?", "shobit1337");
 
 console.log(
@@ -37,7 +38,7 @@ console.log(
     chalk.magenta("\u2665\u2665\u2665\u2665\u2665\u2665\u2665\u2665") +
       "Thank you for playing this game" +
       chalk.magenta("\u2665\u2665\u2665\u2665\u2665\u2665\u2665\u2665") +
-      "\n              Your Final score is:" +
+      `\n${username}, your Final score is:` +
       score
   )
 );
