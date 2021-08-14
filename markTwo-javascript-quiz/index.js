@@ -1,6 +1,9 @@
 var read = require("readline-sync");
 const chalk = require("chalk");
 
+var username = "";
+username = read.question("Who is playing? (name): ");
+
 const questions = [
   {
     question: "When was the JavaScript was first release?",
@@ -60,7 +63,7 @@ function check(ans, n) {
 }
 var score = 0;
 
-console.log(chalk.inverse("Welcome to the Javascript Quiz! Good Luck :D"));
+console.log("Welcome to the Javascript Quiz! Good Luck :D");
 for (let i = 0; i < questions.length; i++) {
   let ans = read.question(questions[i].question);
   check(ans, i);
@@ -72,4 +75,6 @@ console.log(
       chalk.magenta("\u2665\u2665\u2665\u2665\u2665\u2665\u2665\u2665")
   )
 );
-console.log(chalk.black.bold.bgYellow("Final score is: " + score));
+console.log(
+  chalk.black.bold.bgYellow(`${username}, your final score is: ` + score)
+);
