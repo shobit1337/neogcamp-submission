@@ -6,7 +6,18 @@ const App = () => {
   const url =
     "https://emoji-api.com/emojis?access_key=f5d86e27a007416393ecff155f529435a0b39071";
   const [emojiName, setEmojiName] = useState("");
-  const [recentEmoji, setRecentEmoji] = useState([]);
+  const [recentEmoji, setRecentEmoji] = useState([
+    "🚀",
+    "🚲",
+    "🏍️",
+    "🛵",
+    "🚄",
+    "✈️",
+    "🛸",
+    "🚤",
+    "🚗",
+    "🚁",
+  ]);
 
   function addToRecent(emoji) {
     let arr = recentEmoji;
