@@ -46,6 +46,7 @@ const App = () => {
               book={book.name}
               stars={book.stars}
               link={book.link}
+              discription={book.discription}
             />
           ))}
       </div>
