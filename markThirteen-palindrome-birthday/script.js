@@ -17,16 +17,23 @@ showBtnRef.addEventListener("click", () => {
     var isPalindrome = checkPalindromeForAllDateFormats(date);
 
     if (isPalindrome) {
-      resultRef.innerText = "Hurray!! Your birthday is a palindrome🎉🎉";
+      showMessage("Hurray!! Your birthday is a palindrome🎉🎉");
     } else {
       var [ctr, nextDate] = getNextPalindromeDate(date);
 
-      resultRef.innerText = `Sorry, You missed it by ${ctr} days. The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}`;
+      showMessage(
+        `Sorry, You missed it by ${ctr} days. The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}`
+      );
     }
   } else {
-    resultRef.innerText = "Please select your birth date";
+    showMessage("Please select your birth date");
   }
 });
+
+const showMessage = (msg) => {
+  resultRef.style.display = "block";
+  resultRef.innerText = msg;
+};
 
 const reverseStr = (str) => {
   var listOfChars = str.split("");
